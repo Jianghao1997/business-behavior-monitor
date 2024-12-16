@@ -40,7 +40,6 @@ public class CustomAppender<E> extends AppenderBase<E> {
             if (groupId != null && !className.startsWith(groupId)) {
                 return;
             }
-
             LogMessage logMessage = new LogMessage(
                     systemName, className, methodName,
                     Arrays.asList(event.getFormattedMessage().split(" "))

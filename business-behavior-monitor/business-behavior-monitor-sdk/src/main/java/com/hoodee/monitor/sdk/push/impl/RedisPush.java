@@ -43,7 +43,6 @@ public class RedisPush implements IPush {
         this.redissonClient = Redisson.create(config);
         RTopic topic = this.redissonClient.getTopic("business-behavior-monitor-sdk-topic");
         topic.addListener(LogMessage.class, new Listener());
-
     }
 
     class Listener implements MessageListener<LogMessage> {
